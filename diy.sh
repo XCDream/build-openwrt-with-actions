@@ -18,3 +18,6 @@ echo 'src-git UA3F https://github.com/SunBK201/UA3F.git' >>feeds.conf.default
 #git clone https://github.com/kenzok8/small.git package/small
 #git clone https://github.com/SunBK201/UA3F.git package/UA3F
 git clone https://github.com/stevenjoezhang/luci-app-adguardhome.git package/ADGH
+sed -i 's/192.168.1.1/192.168.1.200/g' package/base-files/files/bin/config_generate
+sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
+sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
